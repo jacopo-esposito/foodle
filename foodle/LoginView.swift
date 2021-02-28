@@ -4,31 +4,43 @@ struct LoginView: View {
     
     var body: some View {
         
-        ZStack(alignment: .top) {
+        // MARK: - User Interface -
+        
+        GeometryReader { geometry in
             
-            Color.black
-                .edgesIgnoringSafeArea(.all)
-            
-            Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
+            ZStack(alignment: .top) {
+                
+                Color.black
+                    .edgesIgnoringSafeArea(.all)
+                
+                Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
+                    .clipShape(RoundedRectangle(cornerRadius: 48, style: .continuous))
+                    .edgesIgnoringSafeArea(.bottom)
+                
+                VStack {
+                    
+                    Text("Where food\nmeets tomorrow.")
+                        .font(.custom("Poppins-SemiBold", size: 24))
+                        .foregroundColor(.white)
+                    
+                    Spacer()
+                    
+                }
+                .multilineTextAlignment(.center)
+                .padding(.top, 88)
+                .frame(maxWidth: .infinity)
+                .frame(height: geometry.size.height / 1.5)
+                .background(
+                    
+                    Image(uiImage: #imageLiteral(resourceName: "ToyFaces_Colored_BG_108"))
+                        .resizable()
+                        .scaledToFill()
+                
+                )
                 .clipShape(RoundedRectangle(cornerRadius: 48, style: .continuous))
-                .edgesIgnoringSafeArea(.bottom)
-            
-            VStack {
-                
-                Text("Foodle. Lorem ipsum\ndolor sit amet.")
-                    .font(.custom("Poppins-SemiBold", size: 24))
-                    .foregroundColor(.white)
-                    .padding()
-                
-                Spacer()
+                .edgesIgnoringSafeArea(.all)
                 
             }
-            .multilineTextAlignment(.leading)
-            .padding(.top, 80)
-            .frame(maxWidth: .infinity)
-            .frame(height: 411)
-            .background(Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
-            .clipShape(RoundedRectangle(cornerRadius: 48, style: .continuous))
             
         }
         
