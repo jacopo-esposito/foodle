@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:/Volumes/Extreme SSD/iOS App/foodle/foodle/Poppins"
+      name = "Poppins">
+      <FileRef
+         location = "group:OFL.txt">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-Black.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-BlackItalic.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-Bold.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-BoldItalic.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-ExtraBold.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-ExtraBoldItalic.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-ExtraLight.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-ExtraLightItalic.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-Italic.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-Light.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-LightItalic.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-Medium.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-MediumItalic.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-Regular.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-SemiBold.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-SemiBoldItalic.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-Thin.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-ThinItalic.ttf">
+      </FileRef>
+   </Group>
    <FileRef
       location = "self:">
    </FileRef>

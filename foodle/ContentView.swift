@@ -1,21 +1,19 @@
-//
-//  ContentView.swift
-//  foodle
-//
-//  Created by Jacopo on 28/02/21.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        LoginView()
+        
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
+    
     static var previews: some View {
         ContentView()
     }
+    
 }
