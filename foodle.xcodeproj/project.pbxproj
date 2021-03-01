@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EAB4A94225ECE944003091BB /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB4A94125ECE944003091BB /* Blur.swift */; };
 		EACC40C425EC0D8000D8B340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC40C325EC0D8000D8B340 /* AppDelegate.swift */; };
 		EACC40C625EC0D8000D8B340 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC40C525EC0D8000D8B340 /* SceneDelegate.swift */; };
 		EACC40C825EC0D8000D8B340 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC40C725EC0D8000D8B340 /* ContentView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EAB4A94125ECE944003091BB /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		EACC40C025EC0D8000D8B340 /* foodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACC40C325EC0D8000D8B340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EACC40C525EC0D8000D8B340 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				EACC40C325EC0D8000D8B340 /* AppDelegate.swift */,
+				EAB4A94125ECE944003091BB /* Blur.swift */,
 				EACC40C525EC0D8000D8B340 /* SceneDelegate.swift */,
 				EACC40C725EC0D8000D8B340 /* ContentView.swift */,
 				EACC40D825EC0F5A00D8B340 /* LoginView.swift */,
@@ -201,6 +204,7 @@
 			files = (
 				EACC40C425EC0D8000D8B340 /* AppDelegate.swift in Sources */,
 				EACC40C625EC0D8000D8B340 /* SceneDelegate.swift in Sources */,
+				EAB4A94225ECE944003091BB /* Blur.swift in Sources */,
 				EACC40D925EC0F5A00D8B340 /* LoginView.swift in Sources */,
 				EACC40C825EC0D8000D8B340 /* ContentView.swift in Sources */,
 			);
