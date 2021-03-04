@@ -3,11 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		CAF0710319D528B186824893 /* Pods_foodle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CEEAFFE64D0F3FE85139BC /* Pods_foodle.framework */; };
+		EA5E72C525EF80FF002A65FC /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E72C425EF80FF002A65FC /* SignInWithApple.swift */; };
+		EA5E72DF25EF885C002A65FC /* SignInWithAppleDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E72DE25EF885C002A65FC /* SignInWithAppleDelegates.swift */; };
+		EA5E72E425EF8BF8002A65FC /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E72E325EF8BF8002A65FC /* UserData.swift */; };
+		EA5E72E825EF8D1C002A65FC /* UserDataKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E72E725EF8D1C002A65FC /* UserDataKeychain.swift */; };
+		EA5E730025EF8D36002A65FC /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E72FF25EF8D36002A65FC /* Keychain.swift */; };
+		EA5E730325EF8E7A002A65FC /* WebApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E730225EF8E7A002A65FC /* WebApi.swift */; };
 		EA930C7125EE356B00D1F74D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA930C7025EE356B00D1F74D /* GoogleService-Info.plist */; };
 		EAB4A94225ECE944003091BB /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB4A94125ECE944003091BB /* Blur.swift */; };
 		EACC40C425EC0D8000D8B340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC40C325EC0D8000D8B340 /* AppDelegate.swift */; };
@@ -25,6 +31,13 @@
 		43050D17706204BA7CA0017D /* Pods-foodle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodle.debug.xcconfig"; path = "Target Support Files/Pods-foodle/Pods-foodle.debug.xcconfig"; sourceTree = "<group>"; };
 		69CEEAFFE64D0F3FE85139BC /* Pods_foodle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_foodle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A179A7966E7975649EDC27 /* Pods-foodle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodle.release.xcconfig"; path = "Target Support Files/Pods-foodle/Pods-foodle.release.xcconfig"; sourceTree = "<group>"; };
+		EA5E72C225EF807E002A65FC /* foodle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = foodle.entitlements; sourceTree = "<group>"; };
+		EA5E72C425EF80FF002A65FC /* SignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithApple.swift; sourceTree = "<group>"; };
+		EA5E72DE25EF885C002A65FC /* SignInWithAppleDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleDelegates.swift; sourceTree = "<group>"; };
+		EA5E72E325EF8BF8002A65FC /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		EA5E72E725EF8D1C002A65FC /* UserDataKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataKeychain.swift; sourceTree = "<group>"; };
+		EA5E72FF25EF8D36002A65FC /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		EA5E730225EF8E7A002A65FC /* WebApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApi.swift; sourceTree = "<group>"; };
 		EA930C7025EE356B00D1F74D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EAB4A94125ECE944003091BB /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		EACC40C025EC0D8000D8B340 /* foodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,8 +96,17 @@
 				43050D17706204BA7CA0017D /* Pods-foodle.debug.xcconfig */,
 				C3A179A7966E7975649EDC27 /* Pods-foodle.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EA5E72E225EF8BCB002A65FC /* Credential Storage */ = {
+			isa = PBXGroup;
+			children = (
+				EA5E72E325EF8BF8002A65FC /* UserData.swift */,
+				EA5E72E725EF8D1C002A65FC /* UserDataKeychain.swift */,
+				EA5E72FF25EF8D36002A65FC /* Keychain.swift */,
+			);
+			path = "Credential Storage";
 			sourceTree = "<group>";
 		};
 		EACC40B725EC0D8000D8B340 = {
@@ -108,11 +130,16 @@
 		EACC40C225EC0D8000D8B340 /* foodle */ = {
 			isa = PBXGroup;
 			children = (
+				EA5E72E225EF8BCB002A65FC /* Credential Storage */,
+				EA5E730225EF8E7A002A65FC /* WebApi.swift */,
+				EA5E72C225EF807E002A65FC /* foodle.entitlements */,
 				EACC40C325EC0D8000D8B340 /* AppDelegate.swift */,
 				EAB4A94125ECE944003091BB /* Blur.swift */,
 				EACC40C525EC0D8000D8B340 /* SceneDelegate.swift */,
 				EACC40C725EC0D8000D8B340 /* ContentView.swift */,
 				EACC40D825EC0F5A00D8B340 /* LoginView.swift */,
+				EA5E72DE25EF885C002A65FC /* SignInWithAppleDelegates.swift */,
+				EA5E72C425EF80FF002A65FC /* SignInWithApple.swift */,
 				EACC40C925EC0D8300D8B340 /* Assets.xcassets */,
 				EACC40CE25EC0D8300D8B340 /* LaunchScreen.storyboard */,
 				EA930C7025EE356B00D1F74D /* GoogleService-Info.plist */,
@@ -275,11 +302,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5E72DF25EF885C002A65FC /* SignInWithAppleDelegates.swift in Sources */,
 				EACC40C425EC0D8000D8B340 /* AppDelegate.swift in Sources */,
+				EA5E72E425EF8BF8002A65FC /* UserData.swift in Sources */,
 				EACC40C625EC0D8000D8B340 /* SceneDelegate.swift in Sources */,
 				EAB4A94225ECE944003091BB /* Blur.swift in Sources */,
+				EA5E730325EF8E7A002A65FC /* WebApi.swift in Sources */,
 				EACC40D925EC0F5A00D8B340 /* LoginView.swift in Sources */,
+				EA5E72C525EF80FF002A65FC /* SignInWithApple.swift in Sources */,
+				EA5E72E825EF8D1C002A65FC /* UserDataKeychain.swift in Sources */,
 				EACC40C825EC0D8000D8B340 /* ContentView.swift in Sources */,
+				EA5E730025EF8D36002A65FC /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,9 +452,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = foodle/foodle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"foodle/Preview Content\"";
-				DEVELOPMENT_TEAM = J2ADX4LNWQ;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = foodle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -441,9 +475,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = foodle/foodle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"foodle/Preview Content\"";
-				DEVELOPMENT_TEAM = J2ADX4LNWQ;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = foodle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

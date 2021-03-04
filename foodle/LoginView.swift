@@ -1,11 +1,13 @@
 import SwiftUI
 import Firebase
+import AuthenticationServices
 
 struct LoginView: View {
     
     @State var email = ""
     @State var password = ""
     @State var keyboardIsActive = false
+    @State var signInWithAppleDelegates: SignInWithAppleDelegates! = nil
     
     func disableKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -22,6 +24,29 @@ struct LoginView: View {
             }
 
         }
+        
+    }
+    
+    func signInWithApple() {
+        
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        
+        request.requestedScopes = [.fullName, .email]
+        
+        signInWithAppleDelegates = SignInWithAppleDelegates() { success in
+            
+            if success {
+                print("Sign in with apple succeeded.")
+            } else {
+                // Show the user an error.
+            }
+            
+        }
+        
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        
+        controller.delegate = signInWithAppleDelegates
+        controller.performRequests()
         
     }
     
@@ -119,16 +144,26 @@ struct LoginView: View {
                     .padding()
                     .offset(y: geometry.size.height / 2)
                     
-                    Button(action: { self.signUp() }) {
-                        Text("Sign Up")
+                    VStack(spacing: 16.0) {
+                        
+                        Button(action: { self.signUp() }) {
+                            Text("Sign Up")
+                        }
+                        .padding()
+                        .frame(width: 280, height: 48)
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                        
+                        // Sign-In with Apple.
+                        
+                        SignInWithApple()
+                            .frame(width: 280, height: 48)
+                            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                            .onTapGesture(perform: signInWithApple )
+                        
                     }
-                    .padding()
-                    .padding(.horizontal, 44)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-                    .shadow(color: Color.blue.opacity(0.5), radius: 10, x: 0, y: 5)
-                    .offset(y: 600)
+                    .offset(y: 575)
                         
                 }
                 .offset(y: keyboardIsActive ? geometry.size.height / -2 : 0)
